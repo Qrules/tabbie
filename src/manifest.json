@@ -1,26 +1,18 @@
 {
-  "name": "Tabbie - Material New Tab Page",
-  "short_name": "Tabbie",
-  "description": "A material, customizable, and hackable new tab extension.",
-  "version": "1.1.1",
+  "name": "Warrior Tab",
+  "short_name": "WWTab",
+  "description": "A customizable, tab extension built for westwood students by Qrules under GNU GPL v3, based on Tabbie.",
+  "version": "0.1",
   "incognito": "split",
   "chrome_url_overrides": {
     "newtab": "tab.html"
   },
   "permissions": [
     "identity",
-    "https://lobste.rs/*",
-    "https://api.behance.net/*"
   ],
   "optional_permissions": [
     "http://*/",
     "https://*/",
-
-    "https://www.reddit.com/",
-    "https://oauth.reddit.com/",
-    "https://api.producthunt.com/",
-    "http://storage.googleapis.com/",
-    "https://feedly.com/",
 
     "management",
     "bookmarks",
@@ -28,16 +20,10 @@
     "topSites",
     "sessions",
     "tabs"
-  ],
-  "oauth2": {
-    "client_id": "2445668283-ovnfq4m0m03tmvkhh4rmj4qtu02l5tic.apps.googleusercontent.com",
-    "scopes": [
-      "https://www.googleapis.com/auth/gmail.modify",
-      "profile"
-    ]
+  ]
+    
   },
   "manifest_version": 2,
-  "content_security_policy": "script-src 'self' https://apis.google.com/ https://accounts.google.com https://oauth.googleusercontent.com https://ssl.gstatic.com 'unsafe-eval'; object-src 'self'",
   "icons": {
     "48": "img/icon_48.png",
     "64": "img/icon_64.png",

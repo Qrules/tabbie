@@ -1,0 +1,36 @@
+<!-- GH-ITEM -->
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/core-icon/core-icon.html">
+<link rel="import" href="../../time-ago.html">
+
+<polymer-element name="westwood-item" attributes="item">
+    <template>
+        <link rel="stylesheet" href="../../../dist/css/feeditem.css">
+        <style>
+            .spacing {
+                min-width:60px;
+                display:inline-block;
+            }
+        </style>
+        <div>
+            <h1><a href="{{item.html_url}}" target="_blank" >{{item.full_name}}</a></h1>
+            <p>{{item.description}}</p>
+            <p>
+                <div class="spacing">
+                    <core-icon icon="favorite"></core-icon> {{item.stargazers_count}}
+                </div>
+                <div class="spacing" style="min-width: 120px">
+                    <core-icon icon="today"></core-icon> <time-ago datetime="{{item.created_at}}" epoch="false"></time-ago>
+                </div>
+                <template if="{{item.language}}">
+                    <div class="spacing" style="min-width:100px;">
+                        <core-icon icon="language"></core-icon> {{item.language}}
+                    </div>
+                </template>
+            </p>
+        </div>
+    </template>
+    <script>
+        Polymer({});
+    </script>
+</polymer-element>
